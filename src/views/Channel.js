@@ -60,6 +60,7 @@ export class Channel extends React.Component {
             {this.props.messages.map(({name, time, text, suggested}) => (
                 <Message
                     {...this.props}
+                    key={Math.floor(Math.random()*100) + '' + time}
                     name={name}
                     time={time}
                     text={text}
@@ -71,7 +72,6 @@ export class Channel extends React.Component {
 
     messagesInput() {
         return (<TextInput
-            marginRight={20}
             style={{
                 flex: 2,
                 zIndex: 1,

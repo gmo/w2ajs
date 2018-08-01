@@ -41,7 +41,7 @@ export class Message extends React.Component {
         }
         let names = this.props.name.toUpperCase().split(/ /);
         let initials = names[0].substr(0, 1);
-        if (count(names) > 1) {
+        if (names.length > 1) {
             initials += ' ' + names[1].substr(0, 1);
         }
 
@@ -50,14 +50,16 @@ export class Message extends React.Component {
         switch (this.props.suggested) {
             case true:
                 suggested = (
-                    <Text style={{
-                        color: '#17bebb',
-                        marginLeft: 3,
-                        fontWeight: '900',
-                        letterSpacing: 0.25,
-                        fontSize: 12
-                    }}>
-                        [ RECOMMENDED ]
+                    <Text
+                        style={{
+                            color: '#17bebb',
+                            marginLeft: 3,
+                            fontWeight: '900',
+                            letterSpacing: 0.25,
+                            fontSize: 12
+                        }}
+                    >
+                        {'[ RECOMMENDED ]'}
                     </Text>
                 );
                 buttons = (
@@ -110,7 +112,7 @@ export class Message extends React.Component {
                         letterSpacing: 0.25,
                         fontSize: 12
                     }}>
-                        [ NOTES ]
+                        {'[ NOTES ]'}
                     </Text>
                 );
                 buttons = (
@@ -183,7 +185,7 @@ export class Message extends React.Component {
                     <View style={{marginLeft: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
                         <View style={{flexDirection: 'row'}}>
                             <Text style={{fontSize: 12, fontWeight: '700'}}>
-                                {name}
+                                {this.props.name}
                             </Text>
                             <Text style={{marginLeft: 3, fontSize: 12, color: '#999'}}>
                                 {this.state.hours + ':' + this.state.mins > 10 ? this.state.mins : '0' + this.state.mins}

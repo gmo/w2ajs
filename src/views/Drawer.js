@@ -79,7 +79,7 @@ export class Drawer extends React.Component {
 
     render() {
         let seekers = [];
-        if (this.props.hasVisitedSeeker()) {
+        if (this.props.hasVisitedSeeker) {
             seekers = [{
                 title: 'Uhuru Kenyatta',
                 onPress: () => this.props.changePage('seeker')
