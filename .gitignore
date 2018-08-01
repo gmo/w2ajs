@@ -6,6 +6,10 @@
 # expo
 .expo/
 
+# production
+/build
+/public/assets
+
 # dependencies
 /node_modules
 

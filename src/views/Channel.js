@@ -123,11 +123,11 @@ export class Channel extends React.Component {
                         }}
                     >
                         <Image
-                            source={require('../images/at.png')}
+                            source={require('../../images/at.png')}
                             style={{paddingLeft: 5, height: 20, width: 20}}
                         />
                         <Image
-                            source={require('../images/picture.png')}
+                            source={require('../../images/picture.png')}
                             style={{marginLeft: 5, height: 19, width: 24}}
                         />
                     </View>

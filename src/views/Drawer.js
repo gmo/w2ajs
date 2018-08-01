@@ -104,7 +104,7 @@ export class Drawer extends React.Component {
                         }}
                     >
                         <Image
-                            source={require('../images/logo.png')}
+                            source={require('../../images/logo.png')}
                             style={{width: 80, height: 35}}
                         />
                         <Text
@@ -158,7 +158,7 @@ export class Drawer extends React.Component {
                                 onPress={() => this.props.setDrawer(false)}
                             >
                                 <Image
-                                    source={require('../images/arrow-right.png')}
+                                    source={require('../../images/arrow-right.png')}
                                     style={{height: 20, width: 20}}
                                 />
                             </TouchableOpacity>

@@ -33,7 +33,7 @@ export class Loading extends React.Component {
             >
                 <View style={{alignItems: 'center'}}>
                     <Image
-                        source={require('../images/logo.png')}
+                        source={require('../../images/logo.png')}
                         style={{width: 175, height: 80, marginBottom: 10}}
                     />
                     <Text style={{fontSize: 16, fontWeight: '900', color: 'rgba(255,255,255,0.7)', letterSpacing: 3, textAlign: 'center'}}>

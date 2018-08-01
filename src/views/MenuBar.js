@@ -51,7 +51,7 @@ export class MenuBar extends React.Component {
                     justifyContent: 'flex-start'
                 }}>
                     <TouchableOpacity onPress={() => this.props.setDrawer(true)}>
-                        <Image source={require('../images/menu.png')}
+                        <Image source={require('../../images/menu.png')}
                                style={{
                                    marginBottom: 10,
                                    marginLeft: 10,

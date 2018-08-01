@@ -68,7 +68,7 @@ export class Preview extends React.Component {
                         >
                             KENYA
                         </Text>
-                        {this.previewImage(require('../images/kenya.png'), 170, 170, true)}
+                        {this.previewImage(require('../../images/kenya.png'), 170, 170, true)}
                         <Text
                             style={{
                                 color: '#000',
@@ -125,12 +125,12 @@ export class Preview extends React.Component {
                     }}
                 >
                     <View style={{flexDirection: 'row', flex: 1}}>
-                        {this.previewImage(require('../images/arrow-left.png'), 32, 32)}
-                        {this.previewImage(require('../images/no.png'), 32, 32)}
+                        {this.previewImage(require('../../images/arrow-left.png'), 32, 32)}
+                        {this.previewImage(require('../../images/no.png'), 32, 32)}
                     </View>
                     <View style={{flexDirection: 'row', flex: 1, justifyContent: 'flex-end'}}>
-                        {this.previewImage(require('../images/yes.png'), 32, 32)}
-                        {this.previewImage(require('../images/arrow-right.png'), 32, 32)}
+                        {this.previewImage(require('../../images/yes.png'), 32, 32)}
+                        {this.previewImage(require('../../images/arrow-right.png'), 32, 32)}
                     </View>
                 </View>
             </View>
