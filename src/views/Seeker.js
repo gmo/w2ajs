@@ -15,8 +15,7 @@ export class Seeker extends React.Component {
         this.state = {
             confused: false,
             gospeled: false,
-            isDrawerOpen: false,
-            askedBob: false
+            isDrawerOpen: false
         };
     }
 
@@ -24,7 +23,7 @@ export class Seeker extends React.Component {
         const lastMessageIndex = this.props.messages.length - 1;
         const lastMessage = this.props.messages[lastMessageIndex];
         if (lastMessage.name === this.props.fullname) {
-            if (!this.state.askedBob && !this.state.confused) {
+            if (!this.props.askedBob && !this.state.confused) {
                 this.setState(prevState => { return {...prevState, confused: true}});
                 setTimeout(() => this.props.addMessage('seeker', this.confusingMessage), 10000);
             }
@@ -40,7 +39,8 @@ export class Seeker extends React.Component {
     }
 
     setDrawer(isDrawerOpen) {
-        this.setState(prevState => { return {...prevState, isDrawerOpen, askedBob: true}});
+        this.props.setAskedBob(true);
+        this.setState(prevState => { return {...prevState, isDrawerOpen}});
     }
 
     render() {
