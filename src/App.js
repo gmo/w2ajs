@@ -10,6 +10,7 @@ export default class App extends React.Component {
       fullname: '',
       hasVisitedSeeker: false,
       askedBob: false,
+      botted: false,
       communityMessages: [
         { name: 'W2A Bot', time: Date.now(), suggested: false, text: 'Welcome to W2A, Witness to All, a new application for real-time chatting with Seekers around the world. Global Media Outreach is looking forward to your time and effort leading others to know Christ.'}
       ],
@@ -63,6 +64,8 @@ export default class App extends React.Component {
               dropLastSeekerMessage={this.dropLastSeekerMessage.bind(this)}
               addMessage={this.addCommunityMessage.bind(this)}
               addSeekerMessage={this.addSeekerMessage.bind(this)}
+              botted={this.state.botted}
+              setBotted={this.setBotted.bind(this)}
             />
         );
         break;
@@ -149,6 +152,10 @@ export default class App extends React.Component {
 
   setAskedBob(askedBob) {
     this.setState(prevState => { return {...prevState, askedBob}});
+  }
+
+  setBotted(botted) {
+    this.setState(prevState => { return {...prevState, botted}});
   }
 
   render() {

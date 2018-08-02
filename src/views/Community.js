@@ -6,12 +6,14 @@ import { Drawer } from './Drawer';
 
 /*
 props:
+ botted bool
  fullname
  messages []
  hasVisitedSeeker bool
  dropLastSeekerMessage () => {}
  addMessage (from, text) => {}
  addSeekerMessage (from, text) => {}
+ setBotted (bool) => {}
  */
 export class Community extends React.Component {
     welcomeMessage = "Howdy! I'm Bob Landon and I love to help other OM's. I'll be online for the next few minutes. I happen to know a lot about sharing Jesus with Muslims. Happy fishing!";
@@ -32,14 +34,16 @@ export class Community extends React.Component {
     }
 
     componentDidMount() {
-        // TODO: Add simulated messages from bot, etc
-        setTimeout(() => {
-            this.props.addMessage('system', 'Feel free to introduce yourself to the W2A community of Online Missionaries! Or, click the Menu in the top left to go get your first Seeker contact!');
-        }, 4000);
+        if (!this.props.botted) {
+            setTimeout(() => {
+                this.props.setBotted(true);
+                this.props.addMessage('system', 'Feel free to introduce yourself to the W2A community of Online Missionaries! Or, click the Menu in the top left to go get your first Seeker contact!');
+            }, 4000);
 
-        setTimeout(() => {
-            this.props.addMessage('system', 'If you have any questions, just ask them to the OMs here in this channel!');
-        }, 4000 + Math.floor(Math.random()*8000));
+            setTimeout(() => {
+                this.props.addMessage('system', 'If you have any questions, just ask them to the OMs here in this channel!');
+            }, 4000 + Math.floor(Math.random()*8000));
+        }
     }
 
     componentDidUpdate() {
