@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { Loading, Preview, Community, Tour, Profile, Seeker } from './views';
+import { Loading, Preview, Community, Tour, Profile, Seeker, Notes, Win } from './views';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -83,6 +83,21 @@ export default class App extends React.Component {
             />
         );
         break;
+      case 'notes':
+        output = (
+            <Notes
+                changePage={this.changePage.bind(this)}
+            />
+        );
+        break;
+      case 'win':
+        output = (
+            <Win
+                changePage={this.changePage.bind(this)}
+            />
+        );
+        break;
+
       default:
         output = (
           <Loading

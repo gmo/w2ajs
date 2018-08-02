@@ -4,3 +4,6 @@ export { Community } from './Community';
 export { Tour } from './Tour';
 export { Profile } from './Profile';
 export { Seeker } from './Seeker';
+export { Notes } from './Notes';
+export { Win } from './Win';
+

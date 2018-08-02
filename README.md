@@ -1,3 +1,5 @@
+This project is up-to-date compared to the ClojureScript prototype as of commit 58ece3dc3f88b2c13c7cb0e9e46879d14427a441 on Jul 26 21:52:34
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
