@@ -27,17 +27,22 @@ export class Input extends React.Component {
     }
 
     render() {
+        // Note: Width and Height override is a hack to fix issue with TouchableHighlight on first page of app
+        let style={
+            backgroundColor: '#fff',
+            padding: 10,
+            borderRadius: 5,
+            borderColor: this.state.hasFocus ? '#17bebb' : '#cd5334',
+            borderWidth: 3,
+            width: this.props.width ? this.props.width : '100%',
+        };
+        // Note: Width and Height override is a hack to fix issue with TouchableHighlight on first page of app
+        if (this.props.height) {
+            style.height = this.props.height;
+            style.borderColor = '#fff';
+        }
         return (
-            <View
-                style={{
-                    backgroundColor: '#fff',
-                    padding: 10,
-                    borderRadius: 5,
-                    borderColor: this.state.hasFocus ? '#17bebb' : '#cd5334',
-                    borderWidth: 3,
-                    width: '100%'
-                }}
-            >
+            <View style={style}>
                 <TextInput
                     placeholder={this.props.placeholder}
                     onChangeText={(text) => {this.setValue(text); this.props.setter(text);}}

@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Text, View, Image, ScrollView, TouchableHighlight } from 'react-native';
 
+import { Input } from './Input';
+
 export class Tour extends React.Component {
 
     tourImage(source) {
@@ -18,6 +20,7 @@ export class Tour extends React.Component {
     }
 
     render() {
+        // Note: Input is a hack to fix a bug with TouchableHighlight in Web View
         return (
             <View style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={{flex:2, marginTop:20, justifyContent: 'flex-end', alignItems: 'center'}}>
@@ -48,6 +51,12 @@ export class Tour extends React.Component {
                         alignItems: 'center'
                     }}
                 >
+                    <Input
+                        placeholder='Hack'
+                        setter={() => {}}
+                        width={1}
+                        height={1}
+                    />
                     <TouchableHighlight
                         style={{
                             backgroundColor: '#17bebb',

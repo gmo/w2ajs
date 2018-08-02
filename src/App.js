@@ -6,7 +6,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'profile',
+      page: 'tour',
       fullname: '',
       hasVisitedSeeker: false,
       communityMessages: [
@@ -25,10 +25,10 @@ export default class App extends React.Component {
       case 'tour':
         output = (
             <Tour
-              changePage={this.changePage.bind(this)}
+                changePage={this.changePage.bind(this)}
             />
         );
-          break;
+        break;
       case 'profile':
         output = (
             <Profile
